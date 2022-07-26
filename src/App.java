@@ -1,9 +1,6 @@
 import java.util.Scanner;
-
-//Import do scanner para interagir com o usuário
 public class App {
     public static void main(String[] args) {
-        //Atribuindo nome para meu scanner
             Scanner input = new Scanner(System.in);
             Personagem perso = new Personagem("Enzo",50);
             Personagem perso2 = new Personagem("Zara",50);
@@ -20,7 +17,6 @@ public class App {
             System.out.println("----------------------------------------");
             System.out.println("Digite a opção que Enzo irá escolher.");
             String first = input.nextLine();
-            //equalIgnoreCase para comparar o nome, caso é verdadeiro ou não, e para ignorar letras maiusculas e minusculas
             if(first.equalsIgnoreCase("Play")){
                 System.out.println("Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."+
                                     "Então, ele decide abrir a porta e dá de cara com dois caminhos distintos."+
@@ -33,9 +29,11 @@ public class App {
                     perso.energy(+25);
                     System.out.println("------------------------------------");
                     System.out.println("Enzo escolhe a porta da direita que ao abrir-lá encontra uma reta com uma luz no fim... "+
-                                        "Ao chegar nessa Luz, ele dá de encontro com Zara"+ 
-                                        "\n- uma NPC do jogo que o acompanhará durante toda sua jornada no Labirinto - "+
-                                        "\nao iniciar o papo com Zara, ela lhe informa que o labirinto é cheio de armadilhas e que ele deveria ter cuidado "+
+                                        "Ao chegar nessa Luz, ele dá de encontro com Zara");
+                                        System.out.println();
+                                        System.out.println("Zara é uma NPC do jogo que o acompanhará durante toda sua jornada no Labirinto ");
+                                        System.out.println();
+                                        System.out.println("Ao iniciar o papo com Zara, ela lhe informa que o labirinto é cheio de armadilhas e que ele deveria ter cuidado "+
                                         "e, também, que o próximo obstáculo será a escolha de duas escadas que o levará para pontos diferentes."+
                                         "Ao andar mais um pouco, Enzo e Zara dão de cara com duas escadas, uma que sobe e outra que desce,"+
                                         "e então Zara o pergunta, você vai subir ou vai descer?");
@@ -56,7 +54,7 @@ public class App {
                         System.out.println("Enzo escolhe descer, e ao descer toda a escadaria percebe que chegou ao centro da terra,"+
                                             "o qual é supreendido por larva e perde toda a sua energia, ou seja, ele perdeu o jogo."+
                                             "Mas,mal sabe ele que Zara continua viva, pois próxima da larva ela ganha energia");
-                }
+                }       System.out.println("Enzo,curioso fica assistindo o desenrolar do jogo com Zara Sozinha");
              }
              
                 else if(firstTwo.equalsIgnoreCase("Esquerda")){
@@ -66,9 +64,7 @@ public class App {
                     System.out.println("Enzo escolhe a porta da esquerda, que o faz cair em um buraco bem profundo..."+
                                         "Depois de alguns segundos caindo, sua tela fica preta e mostra que ele zerou sua energia e,consequentemente,"+
                                         "ele perdeu o jogo. Então, Enzo consegue sair de dentro do game e irritado quebra o Playstation XV,"+
-                                        "joga-o pela janela e vai dormir não querendo relembrar o que viveu no game.  ");
-
-            
+                                        "joga-o pela janela e vai dormir não querendo relembrar o que viveu no game.");            
           }
         }
             else{
@@ -79,8 +75,7 @@ public class App {
                                      
             }
                  input.close();  
-        } //Fechamento do input
-             
+        }             
      } 
  
     
