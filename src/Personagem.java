@@ -1,9 +1,10 @@
+//Class criada
 public class Personagem {
     String nomeA;
     int energia;
-
+    //Igualando as instâncias da minha class com os parametros do meu objeto.
     Personagem(String nomeP , int energia){
-        this.nomeA= nomeP;
+        nomeA= nomeP;
         this.energia=energia;
     }
     void energy(int quantidade){
