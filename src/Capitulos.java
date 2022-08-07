@@ -4,11 +4,12 @@ public class Capitulos {
     Personagem personagem;
     int quantidade;
     Scanner input;
-    Capitulos(String nome,String texto,String escolha1,String escolha2,Personagem personagem,int quantidade, Scanner input){
+    String[] vararray = new String[2];
+    Capitulos(String nome,String texto,String escolha1 ,String escolha2,Personagem personagem,int quantidade, Scanner input){
         this.nome = nome;
         this.texto = texto;
-        this.escolha1 = escolha1;
-        this.escolha2 = escolha2;
+        this.escolha1 = vararray[0];
+        this.escolha2 = vararray[1];
         this.personagem = personagem;
         this.quantidade = quantidade;
         this.input = input;
