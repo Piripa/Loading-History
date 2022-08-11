@@ -5,7 +5,7 @@ public class Capitulos {
     int quantidade;
     Scanner input;
     String[] vararray = new String[2];
-    Capitulos(String nome,String texto,String escolha1 ,String escolha2,Personagem personagem,int quantidade, Scanner input){
+    Capitulos(String nome,String texto,String escolha1 ,String escolha2,Personagem personagem,int quantidade, Scanner input,String vararray[]){
         this.nome = nome;
         this.texto = texto;
         this.escolha1 = vararray[0];
@@ -21,6 +21,8 @@ public class Capitulos {
         this.personagem.energy(this.quantidade);
         System.out.println();
         System.out.println(this.texto);
+        System.out.println("-"+this.escolha1);
+        System.out.println("-"+this.escolha2);
     }
     int escolher(){
         int opcao = -1;
@@ -28,17 +30,18 @@ public class Capitulos {
             while(opcao == -1){
                 String desejo = input.nextLine();
                 if (desejo.equalsIgnoreCase(escolha1)){
-                    opcao=1;
+                    opcao=0;
+                    
                 }
                 else if(desejo.equalsIgnoreCase(escolha2)){
-                    opcao=2;
+                    opcao=1;
+                    
                 }
                 else{
                     System.out.println("Opção Incorreta!\nDigite a opção correta:");
                 }
             }
         }
-            
-        return opcao;
+            return opcao;
     }
 }

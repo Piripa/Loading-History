@@ -16,11 +16,11 @@ public class App {
                                             objarray[1]="Exit", 
                                             perso ,
                                             50,
-                                            input
-                                            );
+                                            input,
+                                            objarray);
                                             cap1.mostrar();
                                             int first = cap1.escolher();
-             if(first==1){
+             if(first==0){
             Capitulos cap3 = new Capitulos("As portas não mentem","Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."+
                                         "Então, ele decide abrir a porta e dá de cara com dois caminhos distintos."+
                                         "Enzo percebe que está com uma barra de energia de 50% e não sabe o que vai acontecer com ela."+
@@ -29,11 +29,11 @@ public class App {
                                         objarray[1]="Esquerda", 
                                         perso, 
                                         25,
-                                        input
-                                        );
+                                        input,
+                                        objarray);
                                         cap3.mostrar();
                                         int firstTwo = cap3.escolher();
-                 if(firstTwo==1){
+                 if(firstTwo==0){
             Capitulos cap5 = new Capitulos("Pequena vitória", "Enzo escolhe a porta da direita que ao abrir-lá encontra uma reta com uma luz no fim... "+
                                              "Ao chegar nessa Luz, ele dá de encontro com Zara\nZara é uma NPC do jogo que o acompanhará durante toda sua jornada no labirinto\n"+
                                              "Ao iniciar o papo com Zara, ela lhe informa que o labirinto é cheio de armadilhas e que ele deveria ter cuidado "+
@@ -44,23 +44,23 @@ public class App {
                                              objarray[1]="Descer", 
                                              perso, 
                                              25,
-                                             input
-                                            );
+                                             input,
+                                             objarray);
                                              cap5.mostrar();
                                              int firstThree = cap5.escolher();
-                     if(firstThree==1){
+                     if(firstThree==0){
             Capitulos cap6 = new Capitulos("Chegada ao topo", 
                                             "Enzo escolhe subir, e ao subir toda a escadaria percebe que chegou á cima das nuvens...", 
                                             null,
                                             null, 
                                             perso, 
                                             25,
-                                            input
-                                            );
+                                            input,
+                                            objarray);
                                                 cap6.mostrar();
                                                } 
                
-                     else if(firstThree == 2){
+                     else if(firstThree == 1){
             Capitulos cap7 = new Capitulos("Inferno à diante", 
                                                 "Enzo escolhe descer, e ao descer toda a escadaria percebe que chegou ao centro da terra,"+
                                                  "o qual é supreendido por larva e perde quase toda a sua energia"+
@@ -69,12 +69,12 @@ public class App {
                                                  null, 
                                                  perso, 
                                                  -100,
-                                                 input
-                                                 );
+                                                 input,
+                                                 objarray);
                                                   cap7.mostrar();
                                                 }    
               }
-                 else if(firstTwo == 2){
+                 else if(firstTwo == 1){
             Capitulos cap4 = new Capitulos("A primeira escolha errada", 
                                                 "Enzo escolhe a porta da esquerda, que o faz cair em um buraco bem profundo..."+
                                                 "Depois de alguns segundos caindo, sua tela fica preta e mostra que ele zerou sua energia e,consequentemente,"+
@@ -84,12 +84,12 @@ public class App {
                                                 null, 
                                                 perso, 
                                                 -75,
-                                                input
-                                                );          
+                                                input,
+                                                objarray);          
                                                 cap4.mostrar();
                                             }
          }
-            else if(first == 2){
+            else if(first == 1){
             Capitulos cap2 = new Capitulos("A decepção", 
                                             "Enzo selecionou a opção Exit e com isso conseguiu sair do jogo, consequentemente,"+ 
                                             "saiu de dentro do game e quando voltou já era tarde da noite e sua família já estava dormindo. "+
@@ -99,8 +99,8 @@ public class App {
                                             null, 
                                             perso, 
                                             -50,
-                                            input
-                                            );
+                                            input,
+                                            objarray);
                                             cap2.mostrar();
                                          }
                  input.close();  
