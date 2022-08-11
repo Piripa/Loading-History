@@ -29,16 +29,17 @@ public class Capitulos {
     }
     int escolher(){
         int opcao = -1;
-        if(this.escolhas != null){
-            while(opcao == -1){
-                String desejo = input.nextLine();
-                for(int i = 0; i < escolhas.length;i++){
-                    if (desejo.equalsIgnoreCase(escolhas[i])){
-                        opcao = i;
+        //while(opcao == -1){
+                if(this.escolhas != null){
+                    String desejo = input.nextLine();
+                    for(int i = 0; i < escolhas.length;i++){
+                        if (desejo.equalsIgnoreCase(escolhas[i])){
+                            opcao = i;
                         }
                     }                   
+                    //System.out.println("Digite a opção correta:");
                 }
-            }
+           // }
             return opcao;
         }
     }
