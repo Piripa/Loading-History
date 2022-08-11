@@ -1,15 +1,15 @@
 import java.util.Scanner;
 public class Capitulos {
-    String nome,texto,escolha1,escolha2;
+    String nome,texto;
+    String[] escolhas;
     Personagem personagem;
     int quantidade;
     Scanner input;
-    String[] vararray = new String[2];
-    Capitulos(String nome,String texto,String escolha1 ,String escolha2,Personagem personagem,int quantidade, Scanner input,String vararray[]){
+    //String[] vararray = new String[2];
+        Capitulos(String nome,String texto,String[] escolhas,Personagem personagem,int quantidade, Scanner input){  
         this.nome = nome;
         this.texto = texto;
-        this.escolha1 = vararray[0];
-        this.escolha2 = vararray[1];
+        this.escolhas = escolhas;
         this.personagem = personagem;
         this.quantidade = quantidade;
         this.input = input;
@@ -21,27 +21,25 @@ public class Capitulos {
         this.personagem.energy(this.quantidade);
         System.out.println();
         System.out.println(this.texto);
-        System.out.println("-"+this.escolha1);
-        System.out.println("-"+this.escolha2);
+        if (this.escolhas!= null){
+            for(String escolha : escolhas){
+                System.out.println("-"+escolha);
+            }
+        }
     }
     int escolher(){
         int opcao = -1;
-        if(this.escolha1 != null || this.escolha2 != null){
+        if(this.escolhas != null){
             while(opcao == -1){
                 String desejo = input.nextLine();
-                if (desejo.equalsIgnoreCase(escolha1)){
-                    opcao=0;
-                    
-                }
-                else if(desejo.equalsIgnoreCase(escolha2)){
-                    opcao=1;
-                    
-                }
-                else{
-                    System.out.println("Opção Incorreta!\nDigite a opção correta:");
+                for(int i = 0; i < escolhas.length;i++){
+                    if (desejo.equalsIgnoreCase(escolhas[i])){
+                        opcao = i;
+                        }
+                    }                   
                 }
             }
-        }
             return opcao;
+        }
     }
-}
+

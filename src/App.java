@@ -4,7 +4,6 @@ public class App {
             Scanner input = new Scanner(System.in); 
             Personagem perso = new Personagem("Enzo",0);
            // Personagem perso2 = new Personagem("Zara",50);
-            String[] objarray = new String[2]; 
             Capitulos cap1 = new Capitulos("Piloto",
                                             "O ano era 2094... era aniversário de Enzo, que acabara de chegar da escola,"+
                                             " quando dá de encontro com seu novo video game o Playstation XV o qual vem junto com um óculos de realidade virtual."+
@@ -12,25 +11,22 @@ public class App {
                                             "Enzo ao se conectar com seu vídeo game não percebe que estava chovendo muito forte, e com isso continua a jogar, "+
                                             "porém um raio atinge sua casa e consequentemente acontece uma pane no aparelho que o suga para dentro do jogo."+
                                             "Ele, ao perceber que está dentro do jogo, avista duas opções em sua frente PLAY ou EXIT.\nDigite a opção que enzo irá escolher.", 
-                                            objarray[0]="Play", 
-                                            objarray[1]="Exit", 
+                                            new String[]{ "Play","Exit"}, 
                                             perso ,
                                             50,
-                                            input,
-                                            objarray);
+                                            input);
                                             cap1.mostrar();
                                             int first = cap1.escolher();
              if(first==0){
-            Capitulos cap3 = new Capitulos("As portas não mentem","Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."+
+            Capitulos cap3 = new Capitulos("As portas não mentem",
+                                       "Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."+
                                         "Então, ele decide abrir a porta e dá de cara com dois caminhos distintos."+
                                         "Enzo percebe que está com uma barra de energia de 50% e não sabe o que vai acontecer com ela."+
                                         "Com isso, ele tem que dar o destino de escolher uma das portas, a da DIREITA ou da ESQUERDA\nDigite a porta que Enzo irá escolher", 
-                                        objarray[0]="Direita", 
-                                        objarray[1]="Esquerda", 
+                                        new String[]{"Direita","Esquerda"}, 
                                         perso, 
                                         25,
-                                        input,
-                                        objarray);
+                                        input);
                                         cap3.mostrar();
                                         int firstTwo = cap3.escolher();
                  if(firstTwo==0){
@@ -40,23 +36,19 @@ public class App {
                                              "e, também, que o próximo obstáculo será a escolha de duas escadas que o levará para pontos diferentes."+
                                              "Ao andar mais um pouco, Enzo e Zara dão de cara com duas escadas, uma que sobe e outra que desce,"+
                                              "e então Zara o pergunta, você vai subir ou vai descer?\nDigite se Enzo irá subir ou Descer", 
-                                             objarray[0]="Subir", 
-                                             objarray[1]="Descer", 
+                                             new String[]{"Subir","Descer"},
                                              perso, 
                                              25,
-                                             input,
-                                             objarray);
+                                             input);
                                              cap5.mostrar();
                                              int firstThree = cap5.escolher();
                      if(firstThree==0){
             Capitulos cap6 = new Capitulos("Chegada ao topo", 
                                             "Enzo escolhe subir, e ao subir toda a escadaria percebe que chegou á cima das nuvens...", 
-                                            null,
                                             null, 
                                             perso, 
                                             25,
-                                            input,
-                                            objarray);
+                                            input);
                                                 cap6.mostrar();
                                                } 
                
@@ -65,12 +57,10 @@ public class App {
                                                 "Enzo escolhe descer, e ao descer toda a escadaria percebe que chegou ao centro da terra,"+
                                                  "o qual é supreendido por larva e perde quase toda a sua energia"+
                                                  "mal sabe ele que Zara continua viva, pois próxima da larva ela ganha energia", 
-                                                 null, 
-                                                 null, 
+                                                 null,                                               
                                                  perso, 
                                                  -100,
-                                                 input,
-                                                 objarray);
+                                                 input);
                                                   cap7.mostrar();
                                                 }    
               }
@@ -80,12 +70,10 @@ public class App {
                                                 "Depois de alguns segundos caindo, sua tela fica preta e mostra que ele zerou sua energia e,consequentemente,"+
                                                 "ele perdeu o jogo. Então, Enzo consegue sair de dentro do game e irritado quebra o Playstation XV,"+
                                                 "joga-o pela janela e vai dormir não querendo relembrar o que viveu no game.", 
-                                                null, 
-                                                null, 
+                                                null,
                                                 perso, 
                                                 -75,
-                                                input,
-                                                objarray);          
+                                                input);          
                                                 cap4.mostrar();
                                             }
          }
@@ -95,12 +83,10 @@ public class App {
                                             "saiu de dentro do game e quando voltou já era tarde da noite e sua família já estava dormindo. "+
                                             "Enzo então decidiu desligar completamente seu Playstation XV e foi para o quarto dormir. "+
                                             "Em sua cabeça só havia pensamentos de como teria acontecido isso, mas é algo que nunca saberás...", 
-                                            null, 
-                                            null, 
+                                            null,
                                             perso, 
                                             -50,
-                                            input,
-                                            objarray);
+                                            input);
                                             cap2.mostrar();
                                          }
                  input.close();  
