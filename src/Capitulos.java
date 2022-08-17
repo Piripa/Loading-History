@@ -1,15 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Capitulos {
     String nome,texto;
-    String[] escolhas;
+    ArrayList<Escolha> escolhas;
     Personagem personagem;
     int quantidade;
     Scanner input;
-    //String[] vararray = new String[2];
-        Capitulos(String nome,String texto,String[] escolhas,Personagem personagem,int quantidade, Scanner input){  
+        Capitulos(String nome,String texto,Personagem personagem,int quantidade, Scanner input){  
         this.nome = nome;
         this.texto = texto;
-        this.escolhas = escolhas;
+        this.escolhas = new ArrayList<>();
         this.personagem = personagem;
         this.quantidade = quantidade;
         this.input = input;
@@ -22,9 +22,14 @@ public class Capitulos {
         System.out.println();
         System.out.println(this.texto);
         if (this.escolhas!= null){
-            for(String escolha : escolhas){
-                System.out.println("-"+escolha);
+            for(Escolha escolha : escolhas){
+                System.out.println("-"  +  escolha.texto);                
             }
+        if (this.escolhas.size()>0){
+           int Id= escolher();
+           this.escolhas.get(Id).proximo.mostrar(); 
+        }
+            
         }
     }
     int escolher(){
@@ -32,8 +37,8 @@ public class Capitulos {
         //while(opcao == -1){
                 if(this.escolhas != null){
                     String desejo = input.nextLine();
-                    for(int i = 0; i < escolhas.length;i++){
-                        if (desejo.equalsIgnoreCase(escolhas[i])){
+                    for(int i = 0; i < escolhas.size();i++){
+                        if (desejo.equalsIgnoreCase(escolhas.get(i).texto)){
                             opcao = i;
                         }
                     }                   
