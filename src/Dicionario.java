@@ -76,10 +76,10 @@ private void lerCapitulos(  HashMap<String, Personagem> personagens,
                             Scanner scannerCap, 
                             HashMap<String, Capitulos> caps,
                             Scanner escaneadorCapitulos) {
-    String linhaLidaCap;
-    String linhaNameCap;
-    String linhaTextoCap;
-    String linhaPersoCap;
+    String linhaLidaCap = "";
+    String linhaNameCap = "";
+    String linhaTextoCap = "";
+    String linhaPersoCap = "";
     int linhaVariaEner=0;
     linhaLidaCap = escaneadorCapitulos.nextLine(); // Nome do Capitulo
     linhaNameCap = escaneadorCapitulos.nextLine();
@@ -92,12 +92,12 @@ private void lerCapitulos(  HashMap<String, Personagem> personagens,
     caps.put(linhaNameCap, new Capitulos(linhaNameCap, linhaTextoCap, personagens.get(linhaPersoCap), linhaVariaEner,scannerCap));
    
     } 
-    private void lerEscolhas( HashMap<String, Capitulos> caps,Scanner escaneadorCapitulos) {
+private void lerEscolhas( HashMap<String, Capitulos> caps,Scanner escaneadorCapitulos) {
 
-String linhaOrigem;
-String linhaName;
-String linhaDestino;
-String linhaLidaEscolhas;
+String linhaOrigem = "";
+String linhaName = "";
+String linhaDestino = "";
+String linhaLidaEscolhas = "";
 
 
 linhaLidaEscolhas= escaneadorCapitulos.nextLine(); // Escolha Origem

@@ -18,7 +18,56 @@ Enzo
 QTDALTERADA:
 25
 
+CAPITULO
+NOME:
+Pequena vitória
+TEXTO:
+Enzo escolhe a porta da direita que ao abrir-lá encontra uma reta com uma luz no fim... Ao chegar nessa Luz, ele dá de encontro com Zara\nZara é uma NPC do jogo que o acompanhará durante toda sua jornada no labirinto.Ao iniciar o papo com Zara, ela lhe informa que o labirinto é cheio de armadilhas e que ele deveria ter cuidado e, também, que o próximo obstáculo será a escolha de duas escadas que o levará para pontos diferentes.Ao andar mais um pouco, Enzo e Zara dão de cara com duas escadas, uma que sobe e outra que desce, e então Zara o pergunta, você vai subir ou vai descer?\nDigite se Enzo irá subir ou Descer,PERSONAGEM
+PERSONAGEM:
+Enzo
+QTDALTERADA:
+25
 
+CAPITULO
+NOME:
+Chegada ao topo
+TEXTO:
+Enzo escolhe subir, e ao subir toda a escadaria percebe que chegou á cima das nuvens..
+PERSONAGEM:
+Enzo
+QTDALTERADA:
+25
+
+CAPITULO
+NOME:
+Inferno à diante
+TEXTO:
+Enzo escolhe descer, e ao descer toda a escadaria percebe que chegou ao centro da terra, o qual é supreendido por  e perde quase toda a sua energia mal sabe ele que Zara continua viva, pois próxima da larva ela ganha energiaPERSONAGEM
+Enzo
+QTDALTERADA:
+-100
+
+CAPITULO
+NOME:
+A primeira escolha errada
+TEXTO:
+Enzo escolhe a porta da esquerda, que o faz cair em um buraco bem profundo...Depois de alguns segundos caindo, sua tela fica preta e mostra que ele zerou sua energia e,consequentemente,ele perdeu o jogo. Então, Enzo consegue sair de dentro do game e irritado quebra o Playstation XV, joga-o pela janela e vai dormir não querendo relembrar o que viveu no game.
+PERSONAGEM
+Enzo
+QTDALTERADA:
+-75
+
+CAPITULO
+NOME:
+A decepção
+TEXTO:
+Enzo selecionou a opção Exit e com isso conseguiu sair do jogo, consequentemente,saiu de dentro do game e quando voltou já era tarde da noite e sua família já estava dormindo. Enzo então decidiu desligar completamente seu Playstation XV e foi para o quarto dormir. Em sua cabeça só havia pensamentos de como teria acontecido isso, mas é algo que nunca saberás...
+PERSONAGEM
+Enzo
+QTDALTERADA:
+-50
+
+--------------------------------------------------------------------------------
 ESCOLHA
 ORIGEM:
 Piloto
@@ -26,3 +75,43 @@ OPCAO:
 Play
 DESTINO:
 As portas não mentem
+
+ESCOLHA
+ORIGEM:
+Piloto
+OPCAO:
+Exit
+DESTINO:
+A decepção
+
+ESCOLHA
+ORIGEM:
+As portas não mentem
+OPCAO:
+Direita
+DESTINO:
+Pequena vitória
+
+ESCOLHA
+ORIGEM:
+As portas não mentem
+OPCAO:
+Esquerda
+DESTINO:
+A primeira escolha errada
+
+ESCOLHA
+ORIGEM:
+Pequena Vitória
+OPCAO:
+Subir
+DESTINO:
+Chegada ao topo
+
+ESCOLHA
+ORIGEM:
+Pequena Vitória
+OPCAO:
+Descer
+DESTINO:
+Inferno à diante
