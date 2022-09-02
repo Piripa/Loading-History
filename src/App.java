@@ -7,22 +7,24 @@ public class App {
       Dicionario leitor = new Dicionario();
       HashMap<String,Personagem> recebePersonagem = leitor.LeitorPersonagem("rsc/DicPersonagem.txt");
       Personagem perso = recebePersonagem.get("Enzo");
+      HashMap<String,Capitulos> receberCapitulos = leitor.LeitorCapitulos("rsc/Dicapitulos.txt", recebePersonagem, input);
+      Capitulos capitulo1 = receberCapitulos.get("Piloto");
 
       // Apresentação dos Capítulos//
-      Capitulos raiz = new Capitulos("Piloto",
-            "O ano era 2094... era aniversário de Enzo, que acabara de chegar da escola," +
-                  " quando dá de encontro com seu novo video game o Playstation XV o qual vem junto com um óculos de realidade virtual."
-                  +
-                  "O Playstation XV junto com a nova tecnologia 10D faz o usuário viver intessamente o game, como estivesse dentro dele. "
-                  +
-                  "Enzo ao se conectar com seu vídeo game não percebe que estava chovendo muito forte, e com isso continua a jogar, "
-                  +
-                  "porém um raio atinge sua casa e consequentemente acontece uma pane no aparelho que o suga para dentro do jogo."
-                  +
-                  "Ele, ao perceber que está dentro do jogo, avista duas opções em sua frente PLAY ou EXIT.\nDigite a opção que enzo irá escolher.",
-            perso,
-            50,
-            input);
+      // Capitulos raiz = new Capitulos("Piloto",
+      //       "O ano era 2094... era aniversário de Enzo, que acabara de chegar da escola," +
+      //             " quando dá de encontro com seu novo video game o Playstation XV o qual vem junto com um óculos de realidade virtual."
+      //             +
+      //             "O Playstation XV junto com a nova tecnologia 10D faz o usuário viver intessamente o game, como estivesse dentro dele. "
+      //             +
+      //             "Enzo ao se conectar com seu vídeo game não percebe que estava chovendo muito forte, e com isso continua a jogar, "
+      //             +
+      //             "porém um raio atinge sua casa e consequentemente acontece uma pane no aparelho que o suga para dentro do jogo."
+      //             +
+      //             "Ele, ao perceber que está dentro do jogo, avista duas opções em sua frente PLAY ou EXIT.\nDigite a opção que enzo irá escolher.",
+      //       perso,
+      //       50,
+      //       input);
       Capitulos cap3 = new Capitulos("As portas não mentem",
             "Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."
                   +
@@ -77,14 +79,15 @@ public class App {
 
       // nomecapitulo.nome arraylist.add(new ClassConstrutor(Parâmetros do Objeto))
       // Referenciando as respostas com os capítulos.
-      raiz.escolhas.add(new Escolha("Play", cap3));
-      raiz.escolhas.add(new Escolha("Exit", cap2));
+     
+      capitulo1.escolhas.add(new Escolha("Play", cap3));
+      capitulo1.escolhas.add(new Escolha("Exit", cap2));
       cap3.escolhas.add(new Escolha("Direita", cap5));
       cap3.escolhas.add(new Escolha("Esquerda", cap4));
       cap5.escolhas.add(new Escolha("Subir", cap6));
       cap5.escolhas.add(new Escolha("Descer", cap7));
       // Raiz da árvore sendo mostrada.
-      raiz.mostrar();
+      capitulo1.mostrar();
 
       input.close();
    }

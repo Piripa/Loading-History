@@ -1,0 +1,9 @@
+CAPITULO
+NOME:
+Piloto
+TEXTO:
+O ano era 2094... era aniversário de Enzo, que acabara de chegar da escola quando dá de encontro com seu novo video game o Playstation XV o qual vem junto com um óculos de realidade virtual.O Playstation XV junto com a nova tecnologia 10D faz o usuário viver intessamente o game, como estivesse dentro dele. Enzo ao se conectar com seu vídeo game não percebe que estava chovendo muito forte, e com isso continua a jogar, porém um raio atinge sua casa e consequentemente acontece uma pane no aparelho que o suga para dentro do jogo.Ele, ao perceber que está dentro do jogo, avista duas opções em sua frente PLAY ou EXIT.\nDigite a opção que enzo irá escolher.
+PERSONAGEM:
+Enzo
+QTDALTERADA:
+50
