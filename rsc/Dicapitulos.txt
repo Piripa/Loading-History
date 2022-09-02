@@ -7,3 +7,22 @@ PERSONAGEM:
 Enzo
 QTDALTERADA:
 50
+
+CAPITULO
+NOME:
+As portas não mentem
+TEXTO:
+Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto.Então, ele decide abrir a porta e dá de cara com dois caminhos distintos.Enzo percebe que está com uma barra de energia de 50% e não sabe o que vai acontecer com ela.Com isso, ele tem que dar o destino de escolher uma das portas, a da DIREITA ou da ESQUERDA\nDigite a porta que Enzo irá escolher",
+PERSONAGEM
+Enzo
+QTDALTERADA:
+25
+
+
+ESCOLHA
+ORIGEM:
+Piloto
+OPCAO:
+Play
+DESTINO:
+As portas não mentem

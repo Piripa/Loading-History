@@ -8,7 +8,7 @@ public class App {
       HashMap<String,Personagem> recebePersonagem = leitor.LeitorPersonagem("rsc/DicPersonagem.txt");
       Personagem perso = recebePersonagem.get("Enzo");
       HashMap<String,Capitulos> receberCapitulos = leitor.LeitorCapitulos("rsc/Dicapitulos.txt", recebePersonagem, input);
-      Capitulos capitulo1 = receberCapitulos.get("Piloto");
+      Capitulos raiz = receberCapitulos.get("Piloto");
 
       // Apresentação dos Capítulos//
       // Capitulos raiz = new Capitulos("Piloto",
@@ -25,15 +25,15 @@ public class App {
       //       perso,
       //       50,
       //       input);
-      Capitulos cap3 = new Capitulos("As portas não mentem",
-            "Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."
-                  +
-                  "Então, ele decide abrir a porta e dá de cara com dois caminhos distintos." +
-                  "Enzo percebe que está com uma barra de energia de 50% e não sabe o que vai acontecer com ela." +
-                  "Com isso, ele tem que dar o destino de escolher uma das portas, a da DIREITA ou da ESQUERDA\nDigite a porta que Enzo irá escolher",
-            perso,
-            25,
-            input);
+      // Capitulos cap3 = new Capitulos("As portas não mentem",
+      //       "Enzo escolhe a opção de dar Play... Lá ele encontra um só uma porta que ao ser aberta o leva para um labirinto."
+      //             +
+      //             "Então, ele decide abrir a porta e dá de cara com dois caminhos distintos." +
+      //             "Enzo percebe que está com uma barra de energia de 50% e não sabe o que vai acontecer com ela." +
+      //             "Com isso, ele tem que dar o destino de escolher uma das portas, a da DIREITA ou da ESQUERDA\nDigite a porta que Enzo irá escolher",
+      //       perso,
+      //       25,
+      //       input);
       Capitulos cap5 = new Capitulos("Pequena vitória",
             "Enzo escolhe a porta da direita que ao abrir-lá encontra uma reta com uma luz no fim... " +
                   "Ao chegar nessa Luz, ele dá de encontro com Zara\nZara é uma NPC do jogo que o acompanhará durante toda sua jornada no labirinto\n"
@@ -80,14 +80,14 @@ public class App {
       // nomecapitulo.nome arraylist.add(new ClassConstrutor(Parâmetros do Objeto))
       // Referenciando as respostas com os capítulos.
      
-      capitulo1.escolhas.add(new Escolha("Play", cap3));
-      capitulo1.escolhas.add(new Escolha("Exit", cap2));
-      cap3.escolhas.add(new Escolha("Direita", cap5));
-      cap3.escolhas.add(new Escolha("Esquerda", cap4));
+      //raiz.escolhas.add(new Escolha("Play", cap3));
+      raiz.escolhas.add(new Escolha("Exit", cap2));
+      //cap3.escolhas.add(new Escolha("Direita", cap5));
+      //cap3.escolhas.add(new Escolha("Esquerda", cap4));
       cap5.escolhas.add(new Escolha("Subir", cap6));
       cap5.escolhas.add(new Escolha("Descer", cap7));
       // Raiz da árvore sendo mostrada.
-      capitulo1.mostrar();
+      raiz.mostrar();
 
       input.close();
    }
