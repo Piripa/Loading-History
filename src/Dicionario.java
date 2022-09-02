@@ -53,11 +53,11 @@ HashMap<String,Capitulos> LeitorCapitulos(String caminhoArquivoCapitulo,HashMap<
             if(linhaLidaCap.equals("CAPITULO")){
 
                 lerCapitulos(personagens, scannerCap, caps, escaneadorCapitulos);
-                linhaLidaCap = "";
+                //linhaLidaCap = "";
             }
             else if(linhaLidaCap.equals("ESCOLHA")){
                 lerEscolhas(caps, escaneadorCapitulos);
-                linhaLidaCap = "";
+                //linhaLidaCap = "";
             }
         }
 

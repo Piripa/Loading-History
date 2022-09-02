@@ -9,7 +9,7 @@ public class App {
       Personagem perso = recebePersonagem.get("Enzo");
       HashMap<String,Capitulos> receberCapitulos = leitor.LeitorCapitulos("rsc/Dicapitulos.txt", recebePersonagem, input);
       Capitulos raiz = receberCapitulos.get("Piloto");
-      // Raiz da árvore sendo mostrada.
+
       raiz.mostrar();
 
       input.close();
