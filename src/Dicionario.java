@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Dicionario {
-    HashMap<String,Personagem> LeitorPersonagem(String caminhoArquivoPersonangem ){
+    public HashMap<String,Personagem> LeitorPersonagem(String caminhoArquivoPersonangem ){
         
         HashMap<String,Personagem> personagens = new HashMap<String,Personagem>();
         File arquivoPersonagem = new File(caminhoArquivoPersonangem);
@@ -35,7 +35,7 @@ public class Dicionario {
         
         return personagens;
      }
-HashMap<String,Capitulos> LeitorCapitulos(String caminhoArquivoCapitulo,HashMap<String,Personagem>personagens,Scanner scannerCap ){
+    public HashMap<String,Capitulos> LeitorCapitulos(String caminhoArquivoCapitulo,HashMap<String,Personagem>personagens,Scanner scannerCap ){
         
     HashMap<String,Capitulos> caps = new HashMap<String,Capitulos>();
     File arquivoCapitulo = new File(caminhoArquivoCapitulo);
@@ -53,11 +53,11 @@ HashMap<String,Capitulos> LeitorCapitulos(String caminhoArquivoCapitulo,HashMap<
             if(linhaLidaCap.equals("CAPITULO")){
 
                 lerCapitulos(personagens, scannerCap, caps, escaneadorCapitulos);
-                //linhaLidaCap = "";
+                linhaLidaCap = "";
             }
             else if(linhaLidaCap.equals("ESCOLHA")){
                 lerEscolhas(caps, escaneadorCapitulos);
-                //linhaLidaCap = "";
+                linhaLidaCap = "";
             }
         }
 
@@ -106,6 +106,7 @@ linhaLidaEscolhas = escaneadorCapitulos.nextLine(); // Qual será a escolha
 linhaName = escaneadorCapitulos.nextLine();
 linhaLidaEscolhas = escaneadorCapitulos.nextLine(); //Personagem
 linhaDestino = escaneadorCapitulos.nextLine();
-caps.get(linhaOrigem).escolhas.add(new Escolha(linhaName,caps.get(linhaDestino)));
+Escolha opcao = new Escolha(linhaName,caps.get(linhaDestino));
+caps.get(linhaOrigem).addEscolhas(opcao);
 } 
 }
