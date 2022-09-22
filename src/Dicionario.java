@@ -64,10 +64,17 @@ public class Dicionario
       while (escaneadorCapitulos.hasNextLine()) {
         String linhaLidaCap = "";
 
-        while (!linhaLidaCap.equals("CAPITULO") && !linhaLidaCap.equals("ESCOLHA")) 
+        while (!linhaLidaCap.equals("CAPITULO") && !linhaLidaCap.equals("CAPITULO_COM_IMAGEM") &&!linhaLidaCap.equals("ESCOLHA")) 
         {
           linhaLidaCap = escaneadorCapitulos.nextLine();
 
+        }
+        if (linhaLidaCap.equals("CAPITULO_COM_IMAGEM")) 
+        {
+          CapituloImagem capitulo = new CapituloImagem(personagens,scannerCap,escaneadorCapitulos);
+          caps.put(capitulo.getNome(),capitulo);
+
+          linhaLidaCap = "";
         }
         if (linhaLidaCap.equals("CAPITULO")) 
         {

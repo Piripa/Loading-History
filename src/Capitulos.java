@@ -2,13 +2,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 public class Capitulos {
   private String nome, texto;
-  private ArrayList<Escolha> escolhas; // ArrayList das minhas escolhas, poderei criar e adicionar quantas escolhas
+  protected ArrayList<Escolha> escolhas; // ArrayList das minhas escolhas, poderei criar e adicionar quantas escolhas
                                        // quiser
   private Personagem personagem;
   private int variacaoEnergy;
   private Scanner input;
+
+protected Capitulos(){}
 
   // Nome capitulo, texto do capitulo, Personagem da classe personagem, quantidade
   // de energia que irá ganhar ou perder, Scanner que irá receber junto
@@ -89,7 +92,7 @@ public class Capitulos {
     // Vai retornar o lugar que está no arraylist
     return opcao;
   }
-private void ler(HashMap<String, Personagem> personagens,
+protected void ler(HashMap<String, Personagem> personagens,
                   Scanner scannerCap, 
                   Scanner escaneadorCapitulos) 
 {
