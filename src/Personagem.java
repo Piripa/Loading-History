@@ -3,7 +3,7 @@ public class Personagem {
   private String nomeA;
   private int energia;
 
-  // Igualando as instâncias da minha class com os parametros do meu objeto.
+  /*Igualando as instâncias da minha class com os parametros do meu objeto. */
   public Personagem(String nomeP, int energia) 
   {
     this.nomeA = nomeP;

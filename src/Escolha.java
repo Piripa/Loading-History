@@ -3,8 +3,7 @@ public class Escolha
   private String texto;
   private Capitulos proximo;
 
-  // Texto = escolha , Classe Capitulo e próximo que é o capitulo que será
-  // referênciado.
+  /*Texto = escolha , Classe Capitulo e próximo que é o capitulo que será referênciado. */
   public Escolha(String texto, Capitulos proximo) 
   {
     this.texto = texto;
